@@ -1,4 +1,4 @@
-const axios =
+const axios = require('axios')
 
 exports.all = (req,res) => {
 
