@@ -10,8 +10,9 @@ exports.all = (req,res) => {
   (async () => {
     var response = await axios.get(`https://ipqualityscore.com/api/json/email/${apiKey}/${email}`)
     console.log(response);
-    res.json(response.body)
-    res.status = response.status
+    res.json(req.body)
+    // res.json(response.body)
+    // res.status = response.status
   })();
 
 }
