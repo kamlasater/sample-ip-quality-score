@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-exports.all = (req,res) => {
+module.exports.all = (req,res) => {
 
   console.log(req.body)
 
