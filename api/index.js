@@ -7,12 +7,12 @@ exports.all = (req,res) => {
   const email = req.body['email']
   const apiKey = req.body['apiKey']
 
-  (async () => {
+  (async (email,apiKey) => {
     var response = await axios.get(`https://ipqualityscore.com/api/json/email/${apiKey}/${email}`)
     console.log(response);
     res.json(req.body)
     // res.json(response.body)
     // res.status = response.status
-  })();
+  })(email,apiKey);
 
 }
