@@ -4,8 +4,8 @@ exports.all = (req,res) => {
 
   console.log(req.body)
 
-  const email = req.body['email']
-  const apiKey = req.body['apiKey']
+  var email = req.body['email']
+  var apiKey = req.body['apiKey']
 
   (async (email,apiKey) => {
     var response = await axios.get(`https://ipqualityscore.com/api/json/email/${apiKey}/${email}`)
