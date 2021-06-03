@@ -2,6 +2,8 @@ const axios = require('axios')
 
 exports.all = (req,res) => {
 
+  console.log(req.body)
+
   const email = req.body['email']
   const apiKey = req.body['apiKey']
 
