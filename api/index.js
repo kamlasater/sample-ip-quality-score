@@ -15,4 +15,6 @@ exports.all = (req,res) => {
     // res.status = response.status
   })(email,apiKey);
 
+  console.trace()
+  console.log('test')
 }
