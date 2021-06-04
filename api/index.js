@@ -3,11 +3,14 @@ const axios = require('axios')
 module.exports.all = (req,res) => {
 
   console.log(req.body)
-  console.log(Object.keys(req.body))
 
-  var e = req.body['email']
+  var body = JSON.parse(req.body)
+
+  console.log(Object.keys(body))
+
+  var email = body['email']
   // var a = req.body['apiKey']
-  var key = req.body.apiKey
+  var key = body.apiKey
 
   var r = (async (em,ak) => {
     console.log(em,ak)
@@ -18,7 +21,7 @@ module.exports.all = (req,res) => {
     // res.json(response.body)
     // res.status = response.status
     return "this is the result"
-  })(e,a)
+  })(email,key)
 
   console.trace()
   console.log('test',r)
