@@ -8,7 +8,7 @@ module.exports.all = (req,res) => {
 
   console.log(Object.keys(body))
 
-  var email = body['email']
+  var email = body.email
   // var a = req.body['apiKey']
   var key = body.apiKey
 
@@ -23,6 +23,5 @@ module.exports.all = (req,res) => {
     return "this is the result"
   })(email,key)
 
-  console.trace()
   console.log('test',r)
 }
