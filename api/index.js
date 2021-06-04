@@ -13,7 +13,9 @@ module.exports.all = async (req,res) => {
   var key = body.apiKey
 
   var response = await axios.get(`https://ipqualityscore.com/api/json/email/${key}/${email}`)
-  console.log(response);
+  console.log(response.data);
 
-  res.json(response.data)
+  res.set('Content-Type','application/json')
+  res.body = response.data
+  return "test return value"
 }
