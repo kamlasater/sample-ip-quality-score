@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-module.exports.all = (req,res) => {
+module.exports.all = async (req,res) => {
 
   console.log(req.body)
 
@@ -12,15 +12,8 @@ module.exports.all = (req,res) => {
   // var a = req.body['apiKey']
   var key = body.apiKey
 
-  var r = (async (em,ak) => {
-    console.log(em,ak)
-    var response = await axios.get(`https://ipqualityscore.com/api/json/email/${ak}/${em}`)
-    console.log(response);
-    // res.json(req.body)
-    // res.json(response.body)
-    // res.status = response.status
-    return "this is the result"
-  })(email,key)
+  var response = await axios.get(`https://ipqualityscore.com/api/json/email/${key}/${email}`)
+  console.log(response);
 
-  console.log('test',r)
+  res.json(response.body)
 }
