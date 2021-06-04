@@ -11,7 +11,8 @@ module.exports.all = (req,res) => {
     console.log(em,ak)
     var response = await axios.get(`https://ipqualityscore.com/api/json/email/${ak}/${em}`)
     console.log(response);
-    res.json(req.body)
+    console.trace()
+    // res.json(req.body)
     // res.json(response.body)
     // res.status = response.status
   })(e,a)
