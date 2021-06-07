@@ -10,7 +10,7 @@ module.exports.all = async (req,res) => {
 
   var email = body.email
   // var a = req.body['apiKey']
-  var key = body.apiKey
+  var key = process.env.cyclic_app_env_API_KEY || body.apiKey
 
   var response = await axios.get(`https://ipqualityscore.com/api/json/email/${key}/${email}`)
   console.log(response.data);
