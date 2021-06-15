@@ -16,5 +16,4 @@ module.exports.all = async (req,res) => {
 
   res.set('Content-Type','application/json')
   res.body = response.data
-  return "test return value"
 }
