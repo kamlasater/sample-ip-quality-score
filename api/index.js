@@ -15,6 +15,5 @@ module.exports.all = async (req,res) => {
   console.log(response.data);
 
   res.set('Content-Type','application/json')
-  res.set('x-pru','demo time')
   res.body = response.data
 }
