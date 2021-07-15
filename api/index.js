@@ -1,5 +1,6 @@
 const axios = require('axios')
 
+// Calls to check email quality
 module.exports.all = async (req,res) => {
 
   console.log(req.body)
