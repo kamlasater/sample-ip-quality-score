@@ -13,7 +13,7 @@ module.exports.all = async (req,res) => {
   var key = process.env.cyclic_app_env_API_KEY || body.apiKey
   
   if (key === undefined) {
-    res.body = {"msg":"Define a body with a valid 'apiKey' value or an 'API_KEY' environment variable"}
+    res.body = {"msg":"Define a body with a valid 'apiKey' eg: {'apiKey':'some-value'} or an 'API_KEY' environment variable"}
     return
   }
 
