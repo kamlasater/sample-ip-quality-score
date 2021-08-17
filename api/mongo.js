@@ -3,7 +3,7 @@ require('dotenv').config()
 
 const { MongoClient } = require('mongodb');
 
-const uri = process.env.MONGODB_URI;
+const uri = process.env.cyclic_app_env_MONGODB_URI;
 // console.log(uri)
 
 module.exports.all = async (req,res) => {
