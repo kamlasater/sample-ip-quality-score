@@ -12,15 +12,17 @@ module.exports.get = async (req,res) => {
 
   await client.connect();
 
-  const result = await client.db("sample_airbnb").collection("listingsAndReviews").findOne({ _id: req.params.id });
+  var id = req.params.id
+
+  const result = await client.db("sample_airbnb").collection("listingsAndReviews").findOne({ _id: id });
   if (result) {
-      console.log(`Found a listing in the collection with the name '${nameOfListing}':`);
+      console.log(`Found a listing in the collection with the id of '${id}':`);
       console.log(result);
   } else {
-      console.log(`No listings found with the name '${nameOfListing}'`);
+      console.log(`No listings found with the id '${id}'`);
   }
 
   res.set('Content-Type','application/json')
-  res.body = {env: process.env, req: req}
+  res.body = {env: process.env, req: req, result: result}
 
 }
