@@ -13,7 +13,7 @@ module.exports.all = async (req,res) => {
   res.body = JSON.stringify(dbs,null,2)
 }
 
-module.exports.connect = async () => {
+async function connect() {
   const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
   await client.connect();
@@ -28,3 +28,5 @@ async function listDatabases(client){
   console.log("Databases:");
   databasesList.databases.forEach(db => console.log(` - ${db.name}`));
 };
+
+module.exports.connect = connect
