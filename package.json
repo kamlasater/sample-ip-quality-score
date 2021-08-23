@@ -1,7 +1,30 @@
 {
+  "name": "sample-ip-quality-score",
+  "version": "1.0.0",
+  "description": "Call ipqualityscore.com to get data on email submitted.",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest test",
+    "start": "npx cy"
+  },
   "dependencies": {
+    "@cyclic.sh/sdk": "^0.0.8",
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",
     "mongodb": "^4.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seekayel/sample-ip-quality-score.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seekayel/sample-ip-quality-score/issues"
+  },
+  "homepage": "https://github.com/seekayel/sample-ip-quality-score#readme"
 }
